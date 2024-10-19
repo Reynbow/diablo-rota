@@ -1,5 +1,6 @@
 Requires autohotkey: https://www.autohotkey.com/
-Used for making rotation farming bosses in Diablo easier
+
+This tool is used for making rotation farming bosses in Diablo easier
 
 Trigger key is "F1"
 
