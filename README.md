@@ -1,5 +1,7 @@
 Requires autohotkey: https://www.autohotkey.com/
 
+Either download from above .ahk file or click here to see the contents of the file and click "Download Raw" in the top right corner: https://github.com/Reynbow/diablo-rota/blob/main/diablo_rotations_full.ahk
+
 This tool is used for making rotation farming bosses in Diablo easier
 
 Trigger key is "F1"
