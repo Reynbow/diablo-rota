@@ -15,14 +15,14 @@ else
     PosY := "Center"
 }
 
-Gui, -Border -Caption +AlwaysOnTop +ToolWindow ; Remove default borders and frame, set always on top
-Gui, Color, 1E1E1E, 1E1E1E ; Set dark background color
-Gui, Font, s14 cFFFFFF, Segoe UI ; Set larger font size and font color to white
+Gui, -Border -Caption +AlwaysOnTop +ToolWindow
+Gui, Color, 1E1E1E, 1E1E1E
+Gui, Font, s14 cFFFFFF, Segoe UI
 
 ; Draggable Title Bar
-Gui, Add, Text, x10 y10 w190 h32 cFFFFFF Background3A3A3A gDragWindow +Border, ; Title bar for dragging
+Gui, Add, Text, x10 y10 w190 h32 cFFFFFF Background3A3A3A gDragWindow +Border,
 Gui, Add, Text, x18 y14 w200 cFFFFFF, ROTATIONS
-Gui, Add, Button, x200 y10 w32 h32 gCloseButton +BackgroundDefault, X ; Custom Close Button
+Gui, Add, Button, x200 y10 w32 h32 gCloseButton +BackgroundDefault, X
 
 ; Input Fields
 Gui, Add, Text, x10 y70 w220 cFFFFFF, Enter names below:
@@ -56,11 +56,10 @@ SaveVars:
     Return
 
 DragWindow:
-    PostMessage, 0xA1, 2,,, A ; Makes the GUI draggable by clicking the title bar
+    PostMessage, 0xA1, 2,,, A
 Return
 
 GuiMove:
-    ; Save the position when the GUI is moved
     Gui, +LastFound
     WinGetPos, PosX, PosY,,, A
     IniWrite, %PosX%, %IniFile%, Position, X
@@ -108,7 +107,6 @@ ResetVars:
 
 CloseButton:
 GuiClose:
-    ; Save the position before exiting
     Gui, +LastFound
     WinGetPos, PosX, PosY,,, A
     IniWrite, %PosX%, %IniFile%, Position, X
